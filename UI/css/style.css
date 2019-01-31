@@ -122,3 +122,111 @@ button {
     padding: 15px 30px;
 }
 
+
+.bd-profile {
+    background: #f6f2fd;
+}
+
+.bd-profile header{
+    min-height: 50px;
+    padding-top: 10px;
+    
+}
+
+.bd-profile header h3{
+    float: left;
+    padding: 5px 5px 15px 20px;
+}
+.bd-profile header li {
+  display: inline;
+  float: left;
+  padding: 10px;
+  
+}
+
+.bd-profile header nav {
+    float: right;
+    
+}
+.main {
+    display: flex;
+    width: 100%;
+    
+}
+.aside {
+     margin-top: 20px;
+     
+     
+     
+}
+.aside ul li{
+    border-top: 1px solid #fff;
+    padding: 15px 30px;
+    background-color: #271960;
+}
+.aside a {
+    color: #fff;
+}
+
+.content {
+   margin: 0 auto;
+   max-width: 560px;
+}
+ .card {
+     margin: 20px 0 ;
+     background: #fff;
+     border: 1px solid rgb(173, 171, 171);
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     color: #271960;
+ }
+
+ .card-image img{
+     height: 150px;
+     width: 150px;
+     border-radius: 50px;
+     margin: auto;
+     -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+     -ms-border-radius: 50px;
+     -o-border-radius: 50px;
+}
+.card-image {
+    margin-bottom: 10px;
+}
+.card-body li {
+    padding: 10px;
+    border-top: 1px solid rgb(189, 185, 185);
+}
+
+.table-wrapper{
+    overflow-x: auto;
+    background: #fff;
+    padding-top: 20px;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+table {
+    border-collapse: collapse;
+  width: 100;
+  border: solid thin; 
+  color: #271960;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #f2f2f2;
+}
+@media screen and (max-width: 320px)
+{
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
