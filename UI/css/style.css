@@ -209,7 +209,7 @@ button {
 
 table {
     border-collapse: collapse;
-  width: 100;
+  width: 100%;
   border: solid thin; 
   color: #271960;
 }
@@ -222,6 +222,23 @@ th, td {
     padding: 10px;
     border: 1px solid #f2f2f2;
 }
+
+#bd-parties .container{
+    
+}
+
+#bd-parties .container .table-wrapper {
+    margin-top: 50px;
+    margin-left: 60px;
+    max-width: 70%;
+}
+
+table img {
+    max-height: 80px;
+    max-width: 100px;
+    
+}
+
 @media screen and (max-width: 320px)
 {
     .main {
