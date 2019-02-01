@@ -95,11 +95,16 @@ input:focus{
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select {
+select{
    padding: 10px 10px; 
-   
-}
+   }
 
+textarea {
+    background: #f6f2fd;
+    padding: 10px 5px;
+    
+ 
+}
 button {
     color: #fff;
     background: #00d99e;
