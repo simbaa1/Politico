@@ -94,7 +94,8 @@ input:focus{
 
 input[type="text"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+select {
    padding: 10px 10px; 
    
 }
