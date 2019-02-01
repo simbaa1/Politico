@@ -111,7 +111,7 @@ button {
     cursor: pointer;
 }
 
-.signup-form button{
+.signup-form button, table button{
     margin: 0 auto;
     padding: 15px;
     font-size: 16px;
@@ -225,10 +225,6 @@ th, td {
     border: 1px solid #f2f2f2;
 }
 
-#bd-parties .container{
-    
-}
-
 #bd-parties  .table-wrapper, #bd-vote .table-wrapper {
     margin-top: 50px;
     margin-left: 60px;
@@ -244,12 +240,23 @@ table img {
     
 }
 
+#bd-castvote .main-content {
+    
+    margin: 0 auto;
+    width: 100%;
+}
+#bd-castvote .main-content .table-wrapper table{
+    width: 100%
+    
+}
+
 
 @media screen and (max-width: 320px)
 {
     .main {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 
