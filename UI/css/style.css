@@ -42,7 +42,7 @@ header h3{
   font-family: Georgia, 'Times New Roman', Times, serif; 
 }
 
-.signup header nav a{
+.signup header nav a, #bd-vote li:first-child a{
     border: 1px solid #fff;
     padding: 10px;
     border-radius: 5px;
@@ -51,7 +51,7 @@ header h3{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.signup header nav a:hover {
+.signup header nav a:hover, #bd-vote li:first-child a:hover {
     background: #fff;
     color: #271960;
 }
@@ -253,3 +253,16 @@ table img {
     }
 }
 
+@media screen and (max-width: 600px)
+{
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    #bd-parties  .table-wrapper, #bd-vote .table-wrapper {
+        margin-top: 50px;
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
