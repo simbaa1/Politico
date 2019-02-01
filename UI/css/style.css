@@ -257,17 +257,38 @@ table img {
 }
 
 #bd-index .main{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
  #bd-index .table-wrapper{
    margin-left: 20px;
+   margin-top: 0;
+   width: 100%;
+   border: none;
+   background: #f6f2fd;
+    
+
+}
+
+#bd-index table{
+    border: none;
+    background: #fff;
+    width: 100%;
+}
+
+#bd-index form {
+    border: none;
+    padding: 20px;
+    margin:0 auto;
+    width: 80%;
 }
 #bd-index .table-wrapper a{
     color: #271960;;
 }
 
-
+.del {
+    background: #d92100;
+}
 
 @media screen and (max-width: 320px)
 {
