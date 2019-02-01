@@ -123,6 +123,8 @@ button {
 }
 
 
+
+
 .bd-profile {
     background: #f6f2fd;
 }
@@ -227,17 +229,21 @@ th, td {
     
 }
 
-#bd-parties .container .table-wrapper {
+#bd-parties  .table-wrapper, #bd-vote .table-wrapper {
     margin-top: 50px;
     margin-left: 60px;
     max-width: 70%;
 }
 
+#bd-vote .table-wrapper {
+    max-width: 75%;
+}
 table img {
     max-height: 80px;
     max-width: 100px;
     
 }
+
 
 @media screen and (max-width: 320px)
 {
