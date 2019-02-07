@@ -1,6 +1,7 @@
 venv/
-
+*.pyc
 /__pycache__/
+__pycache__
 
 .coverage
 .coverage.*
@@ -8,4 +9,7 @@ venv/
 instance/
 
 .env
-
+.pytest_cache/
+build/
+*.egg-info/
+.vscode/
