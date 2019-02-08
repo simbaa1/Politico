@@ -38,16 +38,36 @@ def create_office():
     }), 201)
 
 
-# @bp_1.route('/parties', methods=['GET'])
-# def get_party():
-#     if len(parties_list) > 0:
-#         return make_response(jsonify({
-#             "status": 200,
-#             "message": "Request was successful",
-#             "data": [party.__dict__ for party in parties_list]
-#         }), 200)
+@bp_1.route('/offices', methods=['GET'])
+def get_office():
+    if len(offices_list) > 0:
+        return make_response(jsonify({
+            "status": 200,
+            "message": "Request was successful",
+            "data": [office.__dict__ for office in offices_list]
+        }), 200)
 
-#     return make_response(jsonify({
-#         "status": 404,
-#         "message": "No Parties Available"
-#     }), 404)
+    return make_response(jsonify({
+        "status": 404,
+        "message": "No Offices Available"
+    }), 404)
+
+
+@bp_1.route('/offices/<int:id>', methods=['GET'])
+def get_office_byid(id):
+    for office in range(len(offices_list)):
+        if (offices_list[office]["id"]) == int(id):
+            return jsonify({
+                "status": 200,
+                "message": "Request was successful",
+                "data": [{
+                   "id": offices_list[office]["id"],
+                   "name": offices_list[office]["name"],
+                   "type": offices_list[office]["type"]
+                }]
+                    
+            }), 200
+    return jsonify({
+        "status": 404,
+        "message": "Resource could not be found",
+    }), 404
