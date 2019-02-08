@@ -52,3 +52,30 @@ def get_party():
         "status": 404,
         "message": "No Parties Available"
     }), 404)
+
+@bp_1.route('/parties/<int:id>', methods=['GET',  'DELETE'])
+def get_party_byid(id):
+    for party in range(len(parties_list)):
+        if (parties_list[party]["id"]) == int(id):
+            if request.method == 'GET':
+                
+                return jsonify({
+                "status": 200,
+                "message": "Request was successful",
+                "data": [{
+                   "id": parties_list[party]["id"],
+                   "name": parties_list[party]["name"],
+                   "hq_address": parties_list[party]["hq_address"]
+                }]
+                    
+            }), 200
+
+            # if request.method == 'DELETE':
+            #     party = parties_list.pop(party)
+            #     break
+
+        
+    return jsonify({
+        "status": 404,
+        "message": "Resource could not be found",
+    }), 404
