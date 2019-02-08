@@ -55,6 +55,6 @@ $ pip install -r requirements.txt
 | **GEt** /offices | Fetch all political offices records | `api/v1/offices/` |
 | **GET** /offices | Fetch a specific political office record | `api/v1/offices/<int:office_id>` |
 
-#Author
+# Author
 Christopher Simba
 
