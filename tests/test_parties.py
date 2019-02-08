@@ -1,7 +1,8 @@
 import unittest
 import os
 import json
-from app import create_app
+from Politico.app import create_app
+
 
 class PartyTestCase(unittest.TestCase):
     """Class for testing a party"""
@@ -11,7 +12,7 @@ class PartyTestCase(unittest.TestCase):
         self.app = create_app('testing')
         self.client = self.app.test_client()
         self.party = {
-            
+
             'name': 'ODM',
             'hq_address': 'Upperhill',
             'logo_url': 'www.pixabay.com/images',
@@ -103,7 +104,7 @@ class PartyTestCase(unittest.TestCase):
     
     def test_delete_party_no_party(self):
         resp =  self.client.delete('/api/v1/parties/2', content_type='application/json')
-        data = json.loads(resp.data.encode)
+        data = resp.get_json()
         self.assertEqual(resp.status_code, 404)
         self.assertEqual(data['status'], 404)
         self.assertEqual(data['message'], 'Resource could not be found')
