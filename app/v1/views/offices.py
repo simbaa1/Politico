@@ -51,3 +51,23 @@ def get_office():
         "status": 404,
         "message": "No Offices Available"
     }), 404)
+
+
+@bp_1.route('/offices/<int:id>', methods=['GET'])
+def get_office_byid(id):
+    for office in range(len(offices_list)):
+        if (offices_list[office]["id"]) == int(id):
+            return jsonify({
+                "status": 200,
+                "message": "Request was successful",
+                "data": [{
+                   "id": offices_list[office]["id"],
+                   "name": offices_list[office]["name"],
+                   "type": offices_list[office]["type"]
+                }]
+                    
+            }), 200
+    return jsonify({
+        "status": 404,
+        "message": "Resource could not be found",
+    }), 404
