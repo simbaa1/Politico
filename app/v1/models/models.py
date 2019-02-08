@@ -17,5 +17,19 @@ class Parties:
         return repr(self.__dict__)
 
 
+class Offices:
+    
+    def __init__(self, id, name, type):
+        self.id  = id
+        self.name = name
+        self.type = type
+
+    def __getitem__(self, item):
+        return getattr(self, item)
+
+    def __repr__(self):
+        return repr(self.__dict__)
+
+
 
     
