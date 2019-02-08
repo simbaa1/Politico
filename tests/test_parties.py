@@ -41,7 +41,7 @@ class PartyTestCase(unittest.TestCase):
                    'chairperson': 'Maikol'
         })
         data = resp.get_json()
-        self.assertEqual(data['message'], 'Cannot complete the request: Namen field is missing')
+        self.assertEqual(data['message'], 'Cannot complete the request: Name field is missing')
         self.assertEqual(data['status'], 400)
         self.assertEqual(resp.status_code, 400)
 
@@ -109,7 +109,7 @@ class PartyTestCase(unittest.TestCase):
         self.assertEqual(data['message'], 'Resource could not be found')
 
     def test_patch_party(self):
-        """Test editin of a party name by the PATCH request is successful"""
+        """Test editing of a party name by the PATCH request is successful"""
         
         resp = self.client.post('api/v1/parties',content_type='application/json', json=self.party)
         resp = self.client.patch('api/v1/parties/1/CORD')
@@ -129,7 +129,7 @@ class PartyTestCase(unittest.TestCase):
 
     def tearDown(self):
         self.app = None
-        self.item_list.clear()
+        self.party.clear()
 
     
 if __name__ == '__main__':
