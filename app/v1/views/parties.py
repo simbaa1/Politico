@@ -31,10 +31,24 @@ def create_party():
         if (parties_list[party]['id']) == int(id):
             return make_response(jsonify({
             "status": 201,
+            "message": "Party Created Succesfully",
             "data": [{ "id": parties_list[party]['id'],
                  "name": parties_list[party]['name'],
                   "chairperson": parties_list[party]['chairperson']
                  }]
-    }))
+    }), 201)
 
 
+@bp_1.route('/parties', methods=['GET'])
+def get_party():
+    if len(parties_list) > 0:
+        return make_response(jsonify({
+            "status": 200,
+            "message": "Request was successful",
+            "data": [party.__dict__ for party in parties_list]
+        }), 200)
+
+    return make_response(jsonify({
+        "status": 404,
+        "message": "No Parties Available"
+    }), 404)
