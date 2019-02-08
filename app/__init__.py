@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from instance.config import app_config
+from Politico.instance.config import app_config
 from .v1.views.views import bp_1
 from .v1.views import parties, offices
 
