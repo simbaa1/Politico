@@ -20,7 +20,7 @@ class OfficeTestCase(unittest.TestCase):
         """Test the POST request for create office"""
         resp = self.client.post('/api/v1/offices', content_type='application/json', json=self.office)
         data = resp.get_json()
-        self.assertEqual(data["message"], 'office Created Successfully')
+        self.assertEqual(data["message"], 'Office Created Successfully')
         self.assertEqual(resp.status_code, 201)
 
     def test_create_office_with_no_data(self):
