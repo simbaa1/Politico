@@ -1,7 +1,7 @@
 import unittest
 import os
 import json
-from Politico.app import create_app
+from app import create_app
 
 
 class PartyTestCase(unittest.TestCase):
@@ -24,6 +24,7 @@ class PartyTestCase(unittest.TestCase):
         resp = self.client.post('/api/v1/parties', content_type='application/json', json=self.party)
         data = resp.get_json()
         self.assertEqual(data["message"], 'Party Created Successfully')
+        self.assertEqual(data['status'], 201)
         self.assertEqual(resp.status_code, 201)
 
     def test_create_party_with_no_data(self):
@@ -87,10 +88,10 @@ class PartyTestCase(unittest.TestCase):
         """ Test GET request when and ID does not return any party """
 
         resp =  self.client.get('/api/v1/parties/23', content_type='application/json')
-        data = json.loads(resp.data.encode)
+        data = resp.get_json()
         self.assertEqual(resp.status_code, 404)
         self.assertEqual(data['status'], 404)
-        self.assertEqual(data['message'], 'Resource could not be retrieved')
+        self.assertEqual(data['message'], 'Resource could not be found')
 
     def test_delete_party(self):
         """Test deletion of a party by the DELETE request is successful"""
@@ -123,7 +124,7 @@ class PartyTestCase(unittest.TestCase):
 
     def test_patch_party_no_party(self):
         resp =  self.client.patch('/api/v1/parties/2/CORD', content_type='application/json')
-        data = json.loads(resp.data.encode)
+        data = resp.get_json()
         self.assertEqual(resp.status_code, 404)
         self.assertEqual(data['status'], 404)
         self.assertEqual(data['message'], 'Resource could not be found')
