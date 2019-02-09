@@ -17,7 +17,7 @@ while building trust in the process through transparency.
 
 - clone the git repo
 ```
-$ git clone https://github.com/bedann/Politico-API.git
+$ git clone https://github.com/simbaa1/politico.git
 ```
 - cd into the project directory
 ```
