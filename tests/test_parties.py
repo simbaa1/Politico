@@ -63,7 +63,7 @@ class PartyTestCase(unittest.TestCase):
         """ Test GET request API to retrieve a party based on its id"""
 
         self.client.post('/api/v1/parties', content_type='application/json', json=self.party)
-        resp = self.client.get('/api/v1/parties/1')
+        resp = self.client.get('/api/v1/parties/3')
         data = resp.get_json()
         self.assertEqual(resp.status_code, 200)
         self.assertEqual(data['status'], 200)
@@ -101,16 +101,16 @@ class PartyTestCase(unittest.TestCase):
         """Test editing of a party name by the PATCH request is successful"""
         
         resp = self.client.post('api/v1/parties',content_type='application/json', json=self.party)
-        resp = self.client.patch('api/v1/parties/1/CORD')
+        resp = self.client.patch('api/v1/parties/2/som')
         data = resp.get_json()
         self.assertEqual(resp.status_code, 200)
         self.assertEqual(data['status'], 200)
-        self.assertEqual(data['message'], 'Pary name was succesfully updated')
-        self.assertEqual(data['data'][0]['name'], 'CORD')
-        self.assertEqual(data['data'][0]['id'], 1)
+        self.assertEqual(data['message'], 'Party name was succesfully updated')
+        self.assertEqual(data['data'][0]['name'], 'som')
+        self.assertEqual(data['data'][0]['id'], 2)
 
     def test_patch_party_no_party(self):
-        resp =  self.client.patch('/api/v1/parties/2/CORD', content_type='application/json')
+        resp =  self.client.patch('/api/v1/parties/1/CORD', content_type='application/json')
         data = resp.get_json()
         self.assertEqual(resp.status_code, 404)
         self.assertEqual(data['status'], 404)
