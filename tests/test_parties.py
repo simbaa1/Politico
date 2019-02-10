@@ -23,15 +23,15 @@ class PartyTestCase(unittest.TestCase):
         """Test the POST request for create party"""
         resp = self.client.post('/api/v1/parties', content_type='application/json', json=self.party)
         data = resp.get_json()
-        self.assertEqual(data["message"], 'Party Created Successfully')
+        self.assertEqual(data['message'], 'Party Created Successfully')
         self.assertEqual(data['status'], 201)
         self.assertEqual(resp.status_code, 201)
 
     def test_create_party_with_no_data(self):
         """Test when there is no data entered"""
-        resp = self.client.post('api/v1/parties', content_type='application/json')
+        resp = self.client.post('api/v1/parties', content_type='application/json', json={})
         data = resp.get_json()
-        self.assertEqual(data['message'], 'No data has been entered')
+        self.assertEqual(data['message'], 'Some field(s) are missing')
         self.assertEqual(resp.status_code, 400)
     
     def test_create_party_with_missing_fields(self):
@@ -43,23 +43,10 @@ class PartyTestCase(unittest.TestCase):
                    'chairperson': 'Maikol'
         })
         data = resp.get_json()
-        self.assertEqual(data['message'], 'Cannot complete the request: Name field is missing')
+        self.assertEqual(data['message'], 'Some field(s) are missing')
         self.assertEqual(data['status'], 400)
         self.assertEqual(resp.status_code, 400)
 
-    def test_create_party_already_exists(self):
-        """Test when a party with a Similar Name already exist"""
-        self.client.post('/api/v1/parties', content_type='application/json', json=self.party)
-        resp = self.client.post('/api/v1/parties', content_type='application/json', json={
-            'name': 'ODM',
-            'hq_address': 'Starehe',
-            'logo_url': 'logo.png',
-            'chairperson': 'Manu'  }) 
-        
-        data = resp.get_json()
-        self.assertEqual(data['message'], 'Cannot have parties with the same name')
-        self.assertEqual(data['status'], 409)
-        self.assertEqual(resp.status_code, 409)
 
     def test_get_all_parties(self):
         """Test GET request for all parties"""
@@ -101,10 +88,10 @@ class PartyTestCase(unittest.TestCase):
         data = resp.get_json()
         self.assertEqual(resp.status_code, 200)
         self.assertEqual(data['status'], 200)
-        self.assertEqual(data['message'], 'Deletion of the party was successful')
+        
     
     def test_delete_party_no_party(self):
-        resp =  self.client.delete('/api/v1/parties/2', content_type='application/json')
+        resp =  self.client.delete('/api/v1/parties/32', content_type='application/json')
         data = resp.get_json()
         self.assertEqual(resp.status_code, 404)
         self.assertEqual(data['status'], 404)
@@ -119,8 +106,8 @@ class PartyTestCase(unittest.TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertEqual(data['status'], 200)
         self.assertEqual(data['message'], 'Pary name was succesfully updated')
-        self.assertEqual(data['name'], 'CORD')
-        self.assertEqual(data['id'], 1)
+        self.assertEqual(data['data'][0]['name'], 'CORD')
+        self.assertEqual(data['data'][0]['id'], 1)
 
     def test_patch_party_no_party(self):
         resp =  self.client.patch('/api/v1/parties/2/CORD', content_type='application/json')
