@@ -1,0 +1,246 @@
+[33mcommit 2f5ced2ff87ee2695236cf7c4ebcae91b043e74d[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m)[m
+Merge: e93a002 c29c79d
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 20:34:39 2019 +0300
+
+    Merge pull request #28 from simbaa1/ft-delete-party-163712479
+    
+    #163712479 Delete a party endpoint
+
+[33mcommit c29c79d610f541eb2a8198cf06b34504679cca4b[m[33m ([m[1;31morigin/ft-delete-party-163712479[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 20:27:23 2019 +0300
+
+    [finishes #163712479] Delete a party endpoint
+
+[33mcommit e93a002dbc7c36e371c325dc5eb7b0d22d8bd88e[m
+Merge: d168039 9e59755
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 19:11:01 2019 +0300
+
+    Merge pull request #27 from simbaa1/ft-get-party-163712363
+    
+    #163712363 Get a single party endpoint
+
+[33mcommit 9e59755b1d61ec4108944d05337e2bb0bba03aa3[m[33m ([m[1;31morigin/ft-get-party-163712363[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 19:06:23 2019 +0300
+
+    [finishes #163712363] Get a single party endpoint
+
+[33mcommit d168039e75acaadddb5560ac9b42ebdc534adb6a[m
+Merge: ee8795f 231c5e9
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 18:44:04 2019 +0300
+
+    Merge pull request #26 from simbaa1/ft-get-office-163712516
+    
+    #163712516 Set up Get Office by its id
+
+[33mcommit 231c5e94dea607fd8cb82da17288bb6055f0e57b[m[33m ([m[1;31morigin/ft-get-office-163712516[m[33m)[m
+Merge: 1bd0dac ee8795f
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 18:43:50 2019 +0300
+
+    Merge branch 'develop' into ft-get-office-163712516
+
+[33mcommit 1bd0dac9720683b3f7c522b2d31b991345a4380c[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 18:30:03 2019 +0300
+
+    [finishes #163712516] Set up Get Office by its id
+
+[33mcommit ee8795fe6677fdbdc36edc25e97b876d7f688e1b[m
+Merge: 11a6518 b0752ec
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 17:08:33 2019 +0300
+
+    Merge pull request #25 from simbaa1/ft-get-offices-163712505
+    
+    #163712505 Get all offices endpoint
+
+[33mcommit b0752ec947f70ce7c7f5abe9243c48b0b7a85e7e[m[33m ([m[1;31morigin/ft-get-offices-163712505[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 16:48:41 2019 +0300
+
+    [finishes #163712505] Get all offices endpoint
+
+[33mcommit 11a6518c45042ac5319cab2aab017296172223f2[m
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 16:22:25 2019 +0300
+
+    Update Readme
+
+[33mcommit 46bc7c35d42f8fa64dcbd6a894a233d13524c823[m
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 16:21:21 2019 +0300
+
+    Update Readme
+
+[33mcommit dc187583930975a7f62268d538fd3a21ce88b550[m
+Merge: 762b00a 9fa6b58
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 16:15:48 2019 +0300
+
+    Merge pull request #24 from simbaa1/ft-create-office-163712495
+    
+    #163712495 Create office endpoint
+
+[33mcommit 9fa6b58cd3a89ce1f3765b86f66655bea0945b85[m[33m ([m[1;31morigin/ft-create-office-163712495[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 16:05:43 2019 +0300
+
+    [finishes #163712495] Create office endpoint
+
+[33mcommit 762b00a09f14a28984b0703ccece7217d16ba10e[m
+Merge: f77c7a8 a993bcc
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 15:31:40 2019 +0300
+
+    Merge pull request #23 from simbaa1/ft-get-parties-163712264
+    
+    #163712264 Get all parties endpoint
+
+[33mcommit a993bcc54c35d0a032c987e08021b1d2d5760012[m[33m ([m[1;31morigin/ft-get-parties-163712264[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 15:25:51 2019 +0300
+
+    [finishes #163712264] Set up get all parties endpoint
+
+[33mcommit f77c7a822098e7323d0ad07f037ef4b10b5372de[m
+Merge: 1a1cfe0 23ae46f
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 14:13:58 2019 +0300
+
+    Merge pull request #22 from simbaa1/ch-write-tests-163770256
+    
+    #163770256 Edit tests
+
+[33mcommit 23ae46f32096f75a1b3cc643635514f0c74beac8[m[33m ([m[1;31morigin/ch-write-tests-163770256[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 14:09:17 2019 +0300
+
+    Edit tests
+
+[33mcommit 1a1cfe08f11a6282316448808089a2e724439098[m
+Merge: cb2a00a f7d0690
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 14:06:01 2019 +0300
+
+    Merge pull request #21 from simbaa1/ch-write-tests-163770256
+    
+    #163770256 Add tests for the endpoints
+
+[33mcommit f7d06904c7634242ecd99352c248ba3abbd96514[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 12:44:20 2019 +0300
+
+    [finishes #163770256] Set up tests for create_office
+
+[33mcommit 002e261596c7689bcee3a802631a125f4c006bac[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 12:17:19 2019 +0300
+
+    [starts #163770256] Set up tests for create_party
+
+[33mcommit cb2a00abde18f574b46aa1175942b872685f19c2[m
+Merge: 989dbdf 98b4dd4
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Fri Feb 8 00:06:03 2019 +0300
+
+    Merge pull request #20 from simbaa1/ch-update-structure-163770198
+    
+    #163770198 Update folder structure
+
+[33mcommit 98b4dd49f40e7e7a1041ae7d5d4cdb7aeae6a3c7[m[33m ([m[1;31morigin/ch-update-structure-163770198[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Fri Feb 8 00:00:16 2019 +0300
+
+    [finishes #163770198] Update folder structure
+
+[33mcommit 989dbdf89c46d1e24360d664d60adf4ba64ddf73[m
+Merge: a437fc4 375b537
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Thu Feb 7 23:47:53 2019 +0300
+
+    Merge pull request #19 from simbaa1/ft-create-party-163711932
+    
+    #163711932 Create Parties Endpoint
+
+[33mcommit 375b537cc70dcc4a46fe00db4148973378474c54[m[33m ([m[1;31morigin/ft-create-party-163711932[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Thu Feb 7 19:11:56 2019 +0300
+
+    [finishes #163711932] setup create party endpoint
+
+[33mcommit 43b384c1b9d1968c91e952ffdacc30a2be5c4c83[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Thu Feb 7 09:20:09 2019 +0300
+
+    [feature #163711932] Set up blueprints
+
+[33mcommit 0f55fa25edd4a9eb7ea5745af65630031fe0014f[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Thu Feb 7 09:00:00 2019 +0300
+
+    [feature #163711932] Update .gitignore
+
+[33mcommit dc21475c466321fa4ea9aa3468482154b78ad2ff[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Thu Feb 7 08:56:12 2019 +0300
+
+    [feature #163711932] Update .gitignore
+
+[33mcommit 7793852ff5af2a72dfc92d84c77b141734a69d51[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Thu Feb 7 01:17:16 2019 +0300
+
+    [starts #163711932] Initialize flask app
+
+[33mcommit a437fc421d0519b501724fc602dee0c76056d35a[m
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Wed Feb 6 22:43:03 2019 +0300
+
+     add badges for Coveralls and code climate
+
+[33mcommit a29881df46bd89451cf6223427e3fef187c33d96[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Wed Feb 6 09:49:27 2019 +0300
+
+    Update Readme with badge
+
+[33mcommit 9e6c4f9dfa0b7f0559179427980c6aa5bbd92d3d[m
+Merge: e4f10ba 565fafd
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Wed Feb 6 08:30:49 2019 +0300
+
+    Merge pull request #17 from simbaa1/ch-setup-travis-163712058
+    
+    #163712058 Set up travis and update files
+
+[33mcommit 565fafd77ffc57519f1fa64eb338b18f9ba3469c[m[33m ([m[1;31morigin/ch-setup-travis-163712058[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Wed Feb 6 08:27:10 2019 +0300
+
+    [finishes #163712058] set up travis and update files
+
+[33mcommit e4f10ba2d89e223770a67e61ad9cd53376685cc4[m
+Merge: 9b518ff e150dd9
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Tue Feb 5 12:45:42 2019 +0300
+
+    Merge pull request #16 from simbaa1/ch-folder-structure-163714290
+    
+    #163714290 Set up folder structure
+
+[33mcommit e150dd96778c02be5c98ca8fe440e32d803521a9[m[33m ([m[1;31morigin/ch-folder-structure-163714290[m[33m)[m
+Author: Chris Simba <simbachris08@gmail.com>
+Date:   Tue Feb 5 12:23:54 2019 +0300
+
+    [finishes #163714290] Set up flask structure
+
+[33mcommit 9b518ff142cf6f1839c7e24b5234f5720aaeda4a[m
+Author: Christopher Simba <simbakriss@gmail.com>
+Date:   Wed Jan 30 14:38:58 2019 +0300
+
+    Initial commit
