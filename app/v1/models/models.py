@@ -2,7 +2,7 @@
 
 class Parties:
 
-    def __init__(self, id, name, hq_address, logo_url, chairperson):
+    def __init__(self, id=None, name=None, hq_address=None, logo_url=None, chairperson=None):
         self.id  = id
         self.name = name
         self.hq_address = hq_address

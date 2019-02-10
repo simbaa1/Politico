@@ -99,3 +99,28 @@ def delete_party(id):
         "status": 404,
         "message": "Resource could not be found",
     }), 404
+
+
+@bp_1.route('/parties/<int:id>/<string:name>', methods=['PATCH'])
+def edit_party(id):
+    
+    data = request.get_json()
+    new_name = data['name']
+    party = Parties(id=id, name=new_name)    
+
+    return jsonify({
+            "status": 200,
+                
+                "data": [{
+                    "id": party['id'],
+                    "name": party['name']
+                }]
+                    
+            }), 200
+
+            
+        
+    return jsonify({
+        "status": 404,
+        "message": "Resource could not be found",
+    }), 404
