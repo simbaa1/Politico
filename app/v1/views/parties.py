@@ -14,29 +14,53 @@ def create_party():
         name = data['name']
         hq_address = data['hq_address']
         logo_url = data['logo_url']
-        chairperson = data['chairperson']     
+        chairperson = data['chairperson']
+
+
+        #Create instance of Parties and pass in data
+        new_party = Parties(id, name, hq_address, logo_url, chairperson)
+        parties_list.append(new_party)
+    
+    
+        #Loop through the parties list to return the recently added item
+        for party in range(len(parties_list)):
+            if (parties_list[party]['id']) == int(id):
+                return make_response(jsonify({
+                "status": 201,
+                "message": "Party Created Successfully",
+                  "data": [{ "id": parties_list[party]['id'],
+                 "name": parties_list[party]['name'],
+                  "chairperson": parties_list[party]['chairperson']
+                 }]
+                   }), 201)     
     except:
         return jsonify({
                 "status": 400,
-                "error": "invalid request"
-        })
+                "message": "Some field(s) are missing"
+        }), 400
     
-
     #Create instance of Parties and pass in data
     new_party = Parties(id, name, hq_address, logo_url, chairperson)
+   
+    
+    
+
     parties_list.append(new_party)
+    
     
     #Loop through the parties list to return the recently added item
     for party in range(len(parties_list)):
         if (parties_list[party]['id']) == int(id):
             return make_response(jsonify({
             "status": 201,
-            "message": "Party Created Succesfully",
+            "message": "Party Created Successfully",
             "data": [{ "id": parties_list[party]['id'],
                  "name": parties_list[party]['name'],
                   "chairperson": parties_list[party]['chairperson']
                  }]
     }), 201)
+        
+
 
 
 @bp_1.route('/parties', methods=['GET'])
@@ -57,9 +81,7 @@ def get_party():
 def get_party_byid(id):
     for party in range(len(parties_list)):
         if (parties_list[party]["id"]) == int(id):
-            if request.method == 'GET':
-                
-                return jsonify({
+            return jsonify({
                 "status": 200,
                 "message": "Request was successful",
                 "data": [{
@@ -69,58 +91,56 @@ def get_party_byid(id):
                 }]
                     
             }), 200
-
-            
         
     return jsonify({
         "status": 404,
         "message": "Resource could not be found",
-    }), 404
+                   }), 404
 
 
 @bp_1.route('/parties/<int:id>', methods=['DELETE'])
 def delete_party(id):
     for party in range(len(parties_list)):
         if (parties_list[party]["id"]) == int(id):
-            if request.method == 'DELETE':
-                parties_list.pop(party)
-                return jsonify({
+            parties_list.pop(party)
+            return jsonify({
                 "status": 200,
-                "message": "Request was successful",
                 "data": [{
                 "message": "Deletion of the party was successful"
                 }]
                     
             }), 200
 
-            
-        
+         
     return jsonify({
         "status": 404,
         "message": "Resource could not be found",
     }), 404
+
 
 
 @bp_1.route('/parties/<int:id>/<string:name>', methods=['PATCH'])
-def edit_party(id):
+def edit_party(id, name):
+    global parties_list
+    for i in range(len(parties_list)):
+        if parties_list[i]['id']== id:
+            party = parties_list[i]
+            party['name'] = name
+            parties_list = party
     
-    data = request.get_json()
-    new_name = data['name']
-    party = Parties(id=id, name=new_name)    
-
-    return jsonify({
-            "status": 200,
-                
+            return jsonify({
+                "status": 200,
+                 "message": "Party name was succesfully updated",   
                 "data": [{
-                    "id": party['id'],
-                    "name": party['name']
-                }]
-                    
-            }), 200
-
-            
+                    "id": id,
+                    "name" : name
+                }]}), 200
         
     return jsonify({
         "status": 404,
         "message": "Resource could not be found",
     }), 404
+
+       
+            
+        

@@ -13,12 +13,27 @@ def create_office():
         id = len(offices_list) + 1
         name = data['name']
         type = data['type']
-             
+
+        #Create instance of offices and pass in data
+        new_office = Offices(id, name, type)
+        offices_list.append(new_office)
+    
+        #Loop through the offices list to return the recently added item
+        for office in range(len(offices_list)):
+            if (offices_list[office]['id']) == int(id):
+                return make_response(jsonify({
+                "status": 201,
+                "message": "Office Created Successfully",
+                "data": [{ "id": offices_list[office]['id'],
+                 "name": offices_list[office]['name'],
+                  "type": offices_list[office]['type']
+                 }]
+                 }), 201)      
     except:
         return jsonify({
                 "status": 400,
-                "error": "invalid request"
-        })
+                "message": "Some fields are missing"
+        }), 400
     
 
     #Create instance of offices and pass in data
@@ -30,7 +45,7 @@ def create_office():
         if (offices_list[office]['id']) == int(id):
             return make_response(jsonify({
             "status": 201,
-            "message": "Office Created Succesfully",
+            "message": "Office Created Successfully",
             "data": [{ "id": offices_list[office]['id'],
                  "name": offices_list[office]['name'],
                   "type": offices_list[office]['type']
@@ -69,5 +84,5 @@ def get_office_byid(id):
             }), 200
     return jsonify({
         "status": 404,
-        "message": "Resource could not be found",
+        "message": "Resource could not be retrieved",
     }), 404

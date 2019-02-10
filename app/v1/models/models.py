@@ -9,9 +9,14 @@ class Parties:
         self.logo_url = logo_url
         self.chairperson = chairperson
 
+    def __setitem__(self, k, v):
+        self.k = v
 
     def __getitem__(self, item):
         return getattr(self, item)
+    
+    def __len__(self):
+        return 0
 
     def __repr__(self):
         return repr(self.__dict__)
