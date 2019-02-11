@@ -35,7 +35,6 @@ def create_office():
                 "message": "Some fields are missing"
         }), 400
     
-
     #Create instance of offices and pass in data
     new_office = Offices(id, name, type)
     offices_list.append(new_office)

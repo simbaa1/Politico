@@ -77,6 +77,7 @@ def get_party():
         "message": "No Parties Available"
     }), 404)
 
+
 @bp_1.route('/parties/<int:id>', methods=['GET'])
 def get_party_byid(id):
     for party in range(len(parties_list)):
@@ -116,7 +117,6 @@ def delete_party(id):
         "status": 404,
         "message": "Resource could not be found",
     }), 404
-
 
 
 @bp_1.route('/parties/<int:id>/<string:name>', methods=['PATCH'])
