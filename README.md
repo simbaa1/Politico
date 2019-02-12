@@ -10,8 +10,7 @@ while building trust in the process through transparency.
 - [Python 3.x](https://www.python.org/)
 - [Postman](https://www.getpostman.com/downloads/)
 
-<details><summary>Installation</summary>
-<p>
+## Installation
 
 #### installation steps
 
