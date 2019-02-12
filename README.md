@@ -38,10 +38,15 @@ $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 - Run the app
-``` $ flask run ```
+
+``` 
+$ flask run 
+```
 - **To test the app**
 
-``` $ pytest --cov=app ```
+``` 
+$ pytest --cov=app 
+```
 </p>
 </details>
 
