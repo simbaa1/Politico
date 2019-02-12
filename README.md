@@ -6,7 +6,6 @@ Politico enables citizens give their mandate to politicians running for differen
 while building trust in the process through transparency.
 
 ## Requirements
-- [VS code](https://code.visualstudio.com/)
 - [Python 3.x](https://www.python.org/)
 - [Postman](https://www.getpostman.com/downloads/)
 
@@ -24,11 +23,16 @@ $ git clone https://github.com/simbaa1/politico.git
 $ cd politico
 ```
 - create the virtual environment and activate it
-```
+```  
 $ python3 -m venv env
 $ source env/bin/activate
 ```
-
+ - on Windows
+  ```
+  virtualenv env
+  env\Scripts\activate
+  ```
+  
 - install dependencies
 ```
 $ pip install -r requirements.txt
@@ -57,4 +61,6 @@ $ pip install -r requirements.txt
 
 # Author
 Christopher Simba
+
+
 
