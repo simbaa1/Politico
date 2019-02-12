@@ -39,7 +39,8 @@ $ pip install -r requirements.txt
 ```
 - Run the app
 ``` $ flask run ```
-
+To test the app
+``` $ pytest --cov=app ```
 </p>
 </details>
 
