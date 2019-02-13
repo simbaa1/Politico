@@ -42,7 +42,7 @@ header h3{
   font-family: Georgia, 'Times New Roman', Times, serif; 
 }
 
-.signup header nav a, #bd-vote li:first-child a{
+.signup header nav a, #bd-vote li:first-child a, .back-btn li a{
     border: 1px solid #fff;
     padding: 10px;
     border-radius: 5px;
@@ -51,10 +51,20 @@ header h3{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.signup header nav a:hover, #bd-vote li:first-child a:hover {
+.signup header nav a:hover, #bd-vote li:first-child a:hover, .back-btn li a:hover{
     background: #fff;
     color: #271960;
 }
+.back-btn li a{
+  padding: 15px;
+  color: #fff;
+  background: #271960;
+
+  }
+  .back-btn li a:hover {
+    background: transparent;
+    color: #271960;
+  }
 
 header a{
     color: #fff;
@@ -288,6 +298,10 @@ table img {
 
 .del {
     background: #d92100;
+}
+.back-btn {
+  margin: 15px 0 0 50px;
+  padding: 10px;
 }
 
 @media screen and (max-width: 320px)
