@@ -179,7 +179,7 @@ button {
 }
 .aside ul li{
     border-top: 1px solid #fff;
-    padding: 15px 30px;
+    padding: 15px 40px;
     background-color: #271960;
 }
 .aside a {
@@ -324,5 +324,16 @@ table img {
         margin-top: 50px;
         margin-left: 0;
         max-width: 100%;
+    }
+    .main, #bd-index .main {
+       display: flex;
+       flex-direction: column; 
+    }
+    #bd-index .table-wrapper {
+        margin: 0;
+    }
+    #bd-index form {
+        margin: 0;
+        width: 100%;
     }
 }
