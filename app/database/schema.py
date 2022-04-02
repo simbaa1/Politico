@@ -6,10 +6,11 @@ tables = [
     CREATE TABLE IF NOT EXISTS user(
             id INT NOT NULL SERIAL PRIMARY KEY,
             firstname VARCHAR(200) NOT NULL,
-            secondname VARCHAR(200) NOT NULL,
+            lastname VARCHAR(200) NOT NULL,
             othername VARCHAR(200),
             email VARCHAR(50) NOT NULL,
             phonenumber VARCHAR(15),
+            idnumber VARCHAR(15),
             passportUrl VARCHAR(100),
             isAdmin BOOLEAN DEFAULT FALSE,
             UNIQUE(email, phonenumber)

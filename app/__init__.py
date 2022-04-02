@@ -7,12 +7,13 @@ from .v1.views import parties, offices
 from .database.dbsetup import DatabaseConnection as db
 
 def create_app(config_name):
-    app = Flask(__name__, instance_relative_config=True)
-    app.register_blueprint(bp_1, url_prefix='/api/v1')
-    app.config.from_object(app_config[config_name])
-    app.config.from_pyfile('config.py')
+    app = Flask(__name__, instance_relative_config=True)  
     
-    db.connection(config_name)
+    app.config.from_pyfile('config.py')
+    app.config.from_object(app_config[config_name])
+   
+    app.register_blueprint(bp_1, url_prefix='/api/v1')
+    # db.connection(config_name)
    
     
     return app
