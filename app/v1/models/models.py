@@ -30,11 +30,11 @@ class Offices:
         self.type = type
 
     def __getitem__(self, item):
+        # print(item)
         return getattr(self, item)
 
     def __repr__(self):
         return repr(self.__dict__)
-
 
 
     
