@@ -1,11 +1,12 @@
-from flask import request, jsonify, make_response
-from .views import bp_1
+from flask import request, jsonify, make_response, Blueprint
 from ..models.models import Offices
 
+
+bp = Blueprint('office', __name__, url_prefix='/api/v1')
 offices_list = []
 
 
-@bp_1.route('/offices', methods=['POST'])
+@bp.route('/offices', methods=['POST'])
 def create_office():
     '''Create a Political Office'''
     try:
@@ -52,7 +53,7 @@ def create_office():
     }), 201)
 
 
-@bp_1.route('/offices', methods=['GET'])
+@bp.route('/offices', methods=['GET'])
 def get_office():
     if len(offices_list) > 0:
         return make_response(jsonify({
@@ -67,7 +68,7 @@ def get_office():
     }), 404)
 
 
-@bp_1.route('/offices/<int:id>', methods=['GET'])
+@bp.route('/offices/<int:id>', methods=['GET'])
 def get_office_byid(id):
     for office in range(len(offices_list)):
         if (offices_list[office]["id"]) == int(id):
