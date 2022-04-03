@@ -1,11 +1,12 @@
-from flask import request, jsonify, make_response
-from .views import bp_1
+from flask import request, jsonify, make_response, Blueprint
+
 from ..models.models import Parties
 
+bp = Blueprint('party', __name__, url_prefix='/api/v1')
 parties_list = []
 
 
-@bp_1.route('/parties', methods=['POST'])
+@bp.route('/parties', methods=['POST'])
 def create_party():
     '''Create a party'''
     try:
@@ -63,7 +64,7 @@ def create_party():
 
 
 
-@bp_1.route('/parties', methods=['GET'])
+@bp.route('/parties', methods=['GET'])
 def get_party():
     if len(parties_list) > 0:
         return make_response(jsonify({
@@ -78,7 +79,7 @@ def get_party():
     }), 404)
 
 
-@bp_1.route('/parties/<int:id>', methods=['GET'])
+@bp.route('/parties/<int:id>', methods=['GET'])
 def get_party_byid(id):
     for party in range(len(parties_list)):
         if (parties_list[party]["id"]) == int(id):
@@ -99,7 +100,7 @@ def get_party_byid(id):
                    }), 404
 
 
-@bp_1.route('/parties/<int:id>', methods=['DELETE'])
+@bp.route('/parties/<int:id>', methods=['DELETE'])
 def delete_party(id):
     for party in range(len(parties_list)):
         if (parties_list[party]["id"]) == int(id):
@@ -119,7 +120,7 @@ def delete_party(id):
     }), 404
 
 
-@bp_1.route('/parties/<int:id>/<string:name>', methods=['PATCH'])
+@bp.route('/parties/<int:id>/<string:name>', methods=['PATCH'])
 def edit_party(id, name):
     global parties_list
     for i in range(len(parties_list)):
